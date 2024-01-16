@@ -1,0 +1,17 @@
+<!-- id가 "second"인 요소 객체를 가져와서 그 요소의 내용을 바꾸는 예제 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제파일 14-2-1</title>
+</head>
+<body>
+    <div id="first">첫 번째 div</div>
+    <div id="second">두 번째 div</div>
+    <div id="third">세 번째 div</div>
+    <script>
+        var element = document.getElementById("second");
+        element.innerHTML = "여기를 수정함";  //두 번째 div 요소의 내용을 수정한다
+    </script>
+</body>
+</html>

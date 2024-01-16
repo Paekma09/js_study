@@ -1,0 +1,18 @@
+<!-- HTML 문서 안의 첫 번째 div 요소 아래에 포함된 모든 p 요소의 목록을 가져오는 코그드-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제파일 14-2-2-1</title>
+</head>
+<body>
+    <div>
+        <p class="important">Document Object Model</p>의 줄임말 입니다.
+    </div>
+    <script>
+        var divs = document.getElementsByTagName("div");
+        var firstDivParas = divs[0].getElementsByTagName("p");
+        console.log(firstDivParas);
+    </script>
+</body>
+</html>
