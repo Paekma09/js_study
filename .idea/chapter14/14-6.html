@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>간단한 폼 예제</title>
+</head>
+<body>
+    <form method="post" action="./cgi-bin/post.cgi" name="questions" id="form1">
+        <h1>설문 조사</h1>
+        <p>
+            <label>이름 : </label>
+            <input type="text" name="name">
+        </p><p>
+            <label>성별 : </label>
+            <label><input type="radio" name="sex" value="male">남</label>
+            <label><input type="radio" name="sex" value="female">여</label>
+        </p><p>
+            <label>혈액형 : </label>
+            <select name="bloodtype" id="menu1">
+                <option>A형</option>
+                <option>B형</option>
+                <option>O형</option>
+                <option>AB형</option>
+            </select>
+        <p></p>
+            <h2>의견</h2>
+            <textarea name="opinion" rows="6" cols="80" placeholder="의견을 남겨주세요"></textarea>
+        </p><p>
+            <input type="submit" value="보내기">
+            <input type="reset" value="취소">
+        </p>
+    </form>
+    <script>
+        /* 폼 요소와 폼 컨트롤 요소 가져오기 */
+
+        //DOM 메서드로 가져오는 방법
+        var menu = document.getElementById("menu1");
+        var options = document.getElementsByTagName("option");
+        var inputs = document.querySelectorAll("#form1 input[type='radio']");
+
+        //forms 프로퍼티로 form 요소 가져오기
+        var menuForms = document.forms[0];  //인덱스로 가져오기
+        var idForms = document.forms.form1; //id 속성 값으로 가져오기
+        var nameForms = document.forms.questions;   //name 속성 값으로 가져오기
+        var nameForms1 = document.questions;    //name 속성 값이 "questions"인 form 요소의 목록
+
+        //form 요소 객체의 자식 요소 객체 가져오기
+        var a = document.forms.form1[3];
+        var b = document.forms.form1.bloodtype;
+        var c = document.forms.form1.menu1;
+        var d = document.forms.form1.elements[3];
+        var e = document.forms.form1.elements.bloodtype;
+        var f = document.forms.form1.elements.menu1;
+        var inputs1 = document.forms.form1.elements.sex;
+
+        var sex_selected;
+        for (var i=0; i<inputs1.left; i++) {
+            if (inputs1[i].checked) sex_selected = inputs1[i].value;
+        }
+    </script>
+</body>
+</html>

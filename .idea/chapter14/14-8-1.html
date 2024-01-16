@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p class="note invisible" id="note1">...</p>
+    <script>
+        var element = document.getElementById("note1");
+        var list = element.classList;
+        list.toggle("invisible");
+        console.log(element.className); // note
+        list.toggle("invisible");
+        console.log(element.className); // note invisible
+        for (var i=0; i<list.length; i++) {
+            console.log(list[i]);
+        }
+        // note, invisible을 순서대로 표시한다
+    </script>
+</body>
+</html>
