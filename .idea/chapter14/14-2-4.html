@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <input type="checkbox" name="dog" value="pome">포메라니안<br>
+        <input type="checkbox" name="dog" value="dalma">달마시안<br>
+        <input type="checkbox" name="dog" value="bool">불독<br>
+    </form>
+    <script>
+        var dogs = document.getElementsByName("dog");
+        dogs[1].value = "corgi";
+        dogs[1].nextSibling.nodeValue = "웰시 코기";
+        for (var i=0; i<dogs.length; i++) {
+            console.log(i + " 번 째의 값 : " + dogs[i].value);
+        }
+        // ->
+        // 0 번 째의 값 : pome
+        // 1 번 째의 값 : corgi
+        // 2 번 째의 값 : bool
+    </script>
+</body>
+</html>

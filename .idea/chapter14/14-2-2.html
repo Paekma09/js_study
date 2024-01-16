@@ -1,0 +1,17 @@
+<!-- 문서 안의 모든 div 요소를 가리키는 요소 객체 목록을 가져올 수 있다 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제파일 14-2-2</title>
+</head>
+<body>
+    <div id="first">첫 번째 div</div>
+    <div id="second">두 번째 div</div>
+    <div id="third">세 번째 div</div>
+    <script>
+        var elements = document.getElementsByTagName("div");
+        elements[2].innerHTML = "여기를 수정함";  //세 번째 div 요소의 내용을 수정한다
+    </script>
+</body>
+</html>
