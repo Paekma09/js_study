@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blob 내려받기</title>
+    <script src="./19-2.js"></script>
+    <script>
+        window.onload = function () {
+            getBlob("flower.jpg", function (blob) {
+                var blobURL = URL.createObjectURL(blob);
+                document.getElementById("view").src = blobURL;
+            });
+        };
+    </script>
+</head>
+<body>
+    <img id="view">
+</body>
+</html>
